@@ -56,7 +56,13 @@ class App extends React.Component {
             value={this.state.newItem}
             onChange={(e) => this.updateInput(e.target.value)}
           />
-          <button className="add-btn">Add Todo</button>
+          <button
+            onClick={() => this.addItem(this.state.newItem)}
+            disabled={!this.state.newItem.length}
+            className="add-btn"
+          >
+            Add Todo
+          </button>
           <div className="list">
             <ul>
               <li>
