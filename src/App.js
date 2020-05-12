@@ -29,6 +29,16 @@ class App extends React.Component {
     }
   }
 
+  deleteItem(id) {
+    const list = [...this.state.list];
+    const updatedList = list.filter((item) => item.id !== id);
+    this.setState({ list: updatedList });
+  }
+
+  updateInput(input) {
+    this.setState({ newItem: input });
+  }
+
   render() {
     return (
       <div>
@@ -42,6 +52,9 @@ class App extends React.Component {
             type="text"
             className="input-text"
             placeholder="Write a Todo"
+            required
+            value={this.state.newItem}
+            onChange={(e) => this.updateInput(e.target.value)}
           />
           <button className="add-btn">Add Todo</button>
           <div className="list">
