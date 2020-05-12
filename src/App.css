@@ -31,6 +31,11 @@ body {
   border-radius: 0.4rem;
   display: inline-block;
   border: none;
+  cursor: pointer;
+}
+
+.list ul li button:hover {
+  background-color: darkred;
 }
 
 .add-btn {
@@ -43,6 +48,10 @@ body {
   border-radius: 0.4rem;
   display: inline-block;
   border: none;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background: green;
 }
 
 .app-title {
