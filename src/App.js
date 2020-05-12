@@ -65,11 +65,26 @@ class App extends React.Component {
           </button>
           <div className="list">
             <ul>
-              <li>
-                <input type="text" />
-                Learn React
-                <button className="btn">Delete</button>
-              </li>
+              {this.state.list.map((item) => {
+                return (
+                  <li key={item.id}>
+                    <input
+                      type="text"
+                      type="checkbox"
+                      name="isDone"
+                      checked={item.isDone}
+                      onChange={() => {}}
+                    />
+                    {item.value}
+                    <button
+                      className="btn"
+                      onClick={() => this.deleteItem(item.id)}
+                    >
+                      Delete
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
