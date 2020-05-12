@@ -3,6 +3,32 @@ import logo from "./LCO-logo-white.png";
 import "./App.css";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      newItem: "",
+      list: [],
+    };
+  }
+
+  addItem(todoValue) {
+    if (todoValue !== "") {
+      const newItem = {
+        id: Date.now(),
+        value: todoValue,
+        isDone: false,
+      };
+
+      const list = [...this.state.list];
+      list.push(newItem);
+
+      this.setState({
+        list,
+        newItem: "",
+      });
+    }
+  }
+
   render() {
     return (
       <div>

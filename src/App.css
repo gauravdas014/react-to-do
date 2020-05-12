@@ -32,6 +32,7 @@ body {
   display: inline-block;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .list ul li button:hover {
@@ -49,6 +50,7 @@ body {
   display: inline-block;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 .add-btn:hover {
   background: green;
