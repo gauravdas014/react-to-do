@@ -43,7 +43,7 @@ class App extends React.Component {
     return (
       <div>
         <img src={logo} alt="logo" width="100" className="logo" />
-        <h1 className="app-title">LCO ToDo App</h1>
+        <h1 className="app-title">My ToDo App</h1>
 
         <div className="container">
           Add an Item...
