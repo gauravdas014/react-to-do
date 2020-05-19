@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./LCO-logo-white.png";
+import logo from "./logo.png";
 import "./App.css";
 
 class App extends React.Component {
