@@ -69,7 +69,6 @@ class App extends React.Component {
                 return (
                   <li key={item.id}>
                     <input
-                      type="text"
                       type="checkbox"
                       name="isDone"
                       checked={item.isDone}
