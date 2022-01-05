@@ -23,5 +23,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Install Dependencies
+        run: npm i
+
+      - name: Create build
+        run: npm run build
+
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync ./public/ s3://${{ env.S3_BUCKET_NAME }} --delete
+        run: aws s3 sync ./build/ s3://${{ env.S3_BUCKET_NAME }} --delete
