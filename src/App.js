@@ -46,7 +46,7 @@ class App extends React.Component {
         <h1 className="app-title">My ToDo App</h1>
 
         <div className="container">
-          Add an Item to the list 🙌
+          Add an Item to the list [Emoji]
           <br />
           <input
             type="text"
